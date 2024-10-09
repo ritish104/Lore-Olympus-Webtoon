@@ -1,0 +1,386 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d1c7c7;
+  color: #333;
+}
+
+/* Navbar styling */
+/* Navbar styling */
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 20px;
+    background-color: #ebe6e6;
+  }
+  
+  .logo-img {
+    height: 50px;
+    width: 100px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  
+  .hamburger {
+    flex-direction: column;
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #000;
+    transition: all 0.3s ease;
+  }
+  
+
+  .hamburger:hover {
+    border-color: #ebe6e6;
+  }
+  
+  .hamburger:hover span {
+    background-color: #fff;
+  }
+  
+ 
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+  }
+  
+  
+
+/* Hero section */
+.hero {
+  background-image: url('images/manhwa1.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+}
+
+.animated-text {
+  animation: slide-in 2s ease-in-out;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+.cta-button {
+   
+  background-color: #ff6347;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.h-btn{
+    margin-top: 25px;
+}
+.cta-button:hover {
+  background-color: #ff4500;
+}
+
+/* Character section */
+.characters-section-heading{
+ margin-top: 40px;
+ margin-left: 70px;
+}
+.characters-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.character {
+  position: relative;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.character img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.character:hover img {
+  transform: scale(1.1);
+}
+
+.character-details {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.character:hover .character-details {
+  opacity: 1;
+}
+
+.more-text {
+  display: none;
+}
+
+.read-more-btn {
+  background-color: #ff4a4a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e63946;
+}
+
+/* Carousel section */
+.carousel-section {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 300px; 
+    margin: 0 auto;
+    position: relative;
+    
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center; 
+  }
+  
+  .slide {
+    min-width: 300px; 
+    margin: 0 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  button {
+    padding: 10px;
+    margin: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  button.prev {
+    left: 0;
+  }
+  
+  button.next {
+    right: 0;
+  }
+  
+  /* Tablet screens */
+ 
+  
+
+/* =========about sectiom===== */
+.images-about {
+    display: block;
+    margin: 40px auto; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+
+
+/* =======contact section====== */
+.contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.con-input {
+    width: 600px; /* Default width for larger screens */
+    height: 40px;
+    padding-left: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 4px; /* Slight rounding of corners */
+}
+
+.con-input-message {
+    width: 600px; /* Default width for larger screens */
+    height: 70px;
+    padding-left: 20px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 4px; /* Slight rounding of corners */
+}
+
+.con-btn {
+    height: 50px;
+    width: 80px;
+    margin: 20px;
+    background-color: #a31a1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile styles */
+
+/* ========footer section====== */
+.foot {
+    width: 100%;
+    height: auto; 
+    background-color: rgb(65, 60, 60);
+    padding: 20px; 
+    text-align: center; 
+}
+
+.logo-footer {
+    margin: 10px auto; 
+    display: block; 
+    max-width: 150px; 
+}
+
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    color: white;
+    margin: 20px 0; 
+}
+
+.head h4 {
+    margin: 0 15px; 
+}
+
+.logo-footer-p {
+    margin: 10px 0;
+    color: yellow;
+}
+
+
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .logo-footer {
+        max-width: 100px; /* Smaller logo for mobile */
+    }
+    .head {
+        display: flex;
+       flex-direction: column;
+      
+        justify-content: center; 
+        color: white;
+        gap: 10px;
+      
+    }
+
+    .head h4 {
+        font-size: 12px; 
+    }
+
+    .logo-footer-p {
+        font-size: 12px; 
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-footer {
+        max-width: 120px; /* Adjust logo size for tablets */
+    }
+    
+
+    .head h4 {
+        font-size: 14px; /* Adjust font size for tablets */
+    }
+}
+
+/* Laptop styles */
+@media (min-width: 1024px) {
+    .logo-footer {
+        max-width: 150px; /* Larger logo for laptops */
+    }
+
+    .head h4 {
+        font-size: 16px; /* Font size for larger screens */
+    }
+}
